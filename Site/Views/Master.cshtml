@@ -1,0 +1,32 @@
+﻿@inherits Customs.Helper.UmbracoCustomTemplatePage
+@{
+    Layout = null;
+}
+<!doctype html>
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    @*<base href="@baseUrl" />
+    <title>@(siteName != "" ? siteName + " - " : "")@title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="content-language" content="@System.Threading.Thread.CurrentThread.CurrentUICulture.LCID" />
+    <meta name="description" content="@metaDescripton" />
+    <meta name="keywords" content="@metaKeyword" />
+    <meta name="author" content="" />
+    <meta property="og:title" content="@metaTitle" />
+    <meta property="og:description" content="@metaDescription" />
+    <meta property="og:url" content="@baseUrl@metaUrl" />
+    <meta property="og:image" content="@baseUrl@metaImage" />*@
+
+</head>
+<body>
+
+    @Html.Partial("Header")
+    @RenderBody()
+    @Html.Partial("Footer")
+      
+    @RenderSection("Scripts", false)
+</body>
+</html>
